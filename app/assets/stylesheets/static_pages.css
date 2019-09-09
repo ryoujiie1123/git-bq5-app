@@ -1,0 +1,437 @@
+
+@media screen and (max-width:600px){
+  
+  *{
+    margin:0;
+  }
+  html{
+    height:100%;
+  }
+
+  body{
+    background-color: #fff;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "sans-serif";
+  }
+
+  .container{
+    width: 100%;
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    position: relative;
+    height:100%;
+    background-color: #eee;
+  }
+
+
+/* main-header */
+
+.main-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:80px;
+  background-color:#f00;
+  z-index: 2;
+}
+
+.header-title{
+  background-color: #f00;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+
+.header-second{
+  background-color: #eee;
+  width: 100%;
+  height: 40px;
+}
+
+.header-second li{
+  border-right: solid 1px #ddd;
+  text-align: center;
+  color: #111;
+  float:left;
+  list-style: none;
+  width: 33%;
+  height: 100%;
+  vertical-align:middle;
+  line-height: 40px;
+}
+
+/* explain-header */
+
+/* .explain-header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:80px;
+  z-index: 1;
+} */
+
+.explain-header{
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  font-size: 30px;
+}
+
+.header-second a{
+  color: #000;
+  text-decoration: none;
+}
+
+.main-header a{
+  color: #000;
+  text-decoration: none;
+}
+
+/* #wrapper */
+.wrapper{
+  padding-bottom: 40px;
+  padding-top: 80px;
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: scroll;
+  position:relative;
+}
+
+
+/*home*/
+.start-btns{
+  margin:100px 50px;
+  height: auto;
+}
+
+.start-btn{
+  background-color: #ff3333;
+  height: 100px;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.start-btn a:link{
+  color: white;
+  text-decoration: none;
+}
+.start-btn a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+.start-btn a:hover{
+  text-decoration: none;
+  color: white;
+  opacity: 0.4;
+}
+
+.start-login{
+  line-height: 100px;
+}
+
+.start-signup{
+  margin-top: 50px;
+  line-height: 100px;
+}
+
+/* make_quiz */
+.make_quiz textarea{
+  width: 98%;
+}
+
+/* #quizes */
+
+.quiz{
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+}
+
+.quiz img{
+  height: 40px;
+  /* width: 40px; */
+  border-radius: 50%;
+  float: left;
+}
+
+.quiz h4{
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.quiz a{
+  color: #000;
+  text-decoration: none;
+}
+
+.quiz a:visited{
+  color: #000;
+}
+
+
+
+.quiz span{
+  font-size: 15px;
+  color: #666;
+  float:right;
+}
+
+/* more-comment */
+.more-comment{
+  background-color: #fff;
+  width: 100%;
+}
+
+.more-comment button{
+  float:left;
+}
+
+.more-comment textarea{
+  width: 98%;
+}
+
+/*visited*/
+
+/*.visited{*/
+/*  width: 60px;*/
+/*}*/
+
+
+.visited a:nth-child(1):link{
+  color: red;
+  float: left;
+}
+
+
+.visited a:nth-child(1):visited {
+  color: white;
+}
+
+.visited a:nth-child(2):link{
+  color: #fff;
+}
+
+
+.visited a:nth-child(2):visited {
+  color: blue;
+}
+
+/* comments */
+.comment{
+  background-color: #fff;
+  border-bottom: solid 1px #222;
+}
+
+.comment img{
+  height: 40px;
+  /* width: 40px; */
+  border-radius: 50%;
+  float: left;
+}
+
+.comment h4{
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.comment a{
+  color: #000;
+  text-decoration: none;
+}
+
+.comment a:visited{
+  color: #000;
+}
+
+.comment-content{
+  width:90%;
+  float: right;
+  position: relative;
+}
+
+.comment p{
+  font-size: 15px;
+  float: left;
+}
+
+.comment time{
+  font-size: 15px;
+  float:right;
+  padding: 0 5px;
+  position: absolute;
+  bottom:0;
+  right: 0;
+}
+
+/* hint */
+.hint-box{
+  margin: 20px 20px 50px 20px;
+  border-radius: 10%;
+  background-color: white;
+  border: solid 1px #000;
+  padding: 20px;
+  position: relative;
+}
+
+.hint-box button{
+  float: right;
+  bottom: 10px;
+  position: absolute;
+	right: 20px;
+}
+.hint-box a{
+color: #000;
+text-decoration: none;
+}
+
+
+/* make_quiz */
+.make_quiz input{
+  float:right;
+}
+
+/* my_page */
+.mypage{
+  margin: 10px 0;
+}
+
+.mypage img{
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 10px;
+}
+
+.now_point{
+  height: 40px;
+  width: 80%;
+  border-radius: 5px 5px 5px 5px;
+  background-color: white;
+  border: solid 2px black;
+  float: right;
+  margin-right: 10px;
+}
+
+.point{
+  text-decoration: none;
+  float: left;
+  width: 33%;
+  height: 100%;
+}
+
+.now_point div:nth-child(1),
+.now_point div:nth-child(2){
+  border-right: solid 1px #222;
+}
+
+.point li{
+  list-style: none;
+  padding-left: 5px;
+  height: 50%;
+}
+
+.point p{
+  float: right;
+  padding-right: 10px;
+  height: 50%;
+}
+
+.mypage-select{
+  width: 100%;
+  list-style: none;
+  height: 30px;
+  background-color: #fff;
+  border-bottom: solid 1px #222;
+  border-top: solid 1px #222;
+  margin-top: 5px;
+}
+
+.mypage-select a{
+  color: #000;
+  text-decoration: none;
+}
+
+.mypage-select li{
+  float: left;
+  width: 33%;
+  height: 30px;
+  background-color: #ff0;
+}
+
+.mypage-select li:nth-child(1),
+.mypage-select li:nth-child(2){
+  border-right: solid 1px #222;
+}
+
+/*now_account*/
+.now_account{
+  padding-bottom: 40px;
+}
+
+/* #main-footer */
+.main-footer{
+  width: 100%;
+  height: 40px;
+  position:fixed;
+  bottom:0;
+  left:0;
+  z-index: 1;
+  /* float: left; */
+}
+
+.main-footer li{
+  /* border-right: solid 1px #ddd; */
+  text-align: center;
+  color: #111;
+  float:left;
+  list-style: none;
+  width: 25%;
+  height: 100%;
+  vertical-align:middle;
+  background-color: #3ee;
+  line-height: 40px;
+}
+
+.main-footer a{
+  color: #000;
+  text-decoration: none;
+}
+
+
+
+/* header,footer固定 */
+/* .container .main-header .wrapper .main-footer{
+  display:block;
+  height:40px;
+  line-height:40px;
+  margin:5px 10px;
+  background-color:#eee;
+  float:right;
+  padding:0 20px;
+  text-decoration:none;
+  text-transform:uppercase;
+} */
+
+/* 多くの場面で使う */
+.clear{
+  clear:both;
+}
+
+}
