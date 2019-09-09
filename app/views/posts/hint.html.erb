@@ -1,0 +1,10 @@
+<h3 class="explain-header"><font face="Impact">HINT</font></h3>
+  </header>
+
+  <div class="wrapper">
+    <div class="hint-box">
+      <h2><font face="Impact">ヒント</font></h2>
+      <p><%= @post.hint %></p>
+      <%= link_to "閉じる", "/posts/#{@post.id}", class: "btn btn-lg btn-primary" %>
+    </div>
+  </div>
