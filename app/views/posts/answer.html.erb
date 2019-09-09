@@ -1,0 +1,19 @@
+<h3 class="explain-header"><font face="Impact">ANSWER</font></h3>
+  </header>
+
+  <div class="wrapper">
+    <div class="hint-box">
+      <% if @yes == 1 %>
+        <p>正解!</p>
+        <p>あなたの答え:<%= @answer.remark %></p>
+      <% else %>
+        <p>残念...不正解です。</p>
+        <p>あなたの答え:<%= @answer.remark %></p>
+      <% end %>
+      <h2><font face="Impact">答え</font></h2>
+      <p><%= @post.answer %></p>
+      <h2><font face="Impact">解説</font></h2>
+      <p><%= @post.explain %></p>
+      <%= link_to "閉じる", "/posts/#{@post.id}", class: "btn btn-lg btn-primary" %>
+    </div>
+  </div>
