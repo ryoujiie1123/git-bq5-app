@@ -1,0 +1,18 @@
+ <h3 class="explain-header"><font face="Impact">Sign In</font></h3>
+</header>
+<div class="wrapper">
+  <div class="main posts-new">
+    <div class="container">
+    <!-- form_tagメソッドを用いて、データの送信先を指定してください -->
+      <%= form_tag("/users/create") do %>
+        <p>ユーザー名</p>
+        <input name="name" value="<%= @user.name %>">
+        <p>メールアドレス</p>
+        <input name="email" value="<%= @user.email %>">
+        <p>パスワード</p>
+        <input type="password" name="password" value="<%= @user.password %>">
+        <input type="submit" value="新規登録">
+      <% end %>
+    </div>
+  </div>
+</div>
