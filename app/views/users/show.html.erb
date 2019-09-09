@@ -1,0 +1,56 @@
+<% provide(:title, "My Page") %>
+    <h3 class="explain-header"><font face="Impact">MY PAGE</font></h3>
+</header>
+<div class="wrapper">
+    <div class="mypage">
+      <% if @current_user %>
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <div class="mypage-header">
+          
+      <h2><%= @user.name %></h2>
+      <% if @user.id == @current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+        <%= link_to("ログアウト", "/logout", {method: :post}) %>
+      <% end %>
+        <div class="now_point">
+          <div class="point"><li>ポイント</li><p><%= @user.point %>pt</p></div>
+          <div class="point"><li>出題数</li><p><%= @user.numMake %>問</p></div>
+          <div class="point"><li>回答数</li><p><%= @user.numAnswer %>問</p></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="mypage-select">
+        <li class="active"><%= link_to("出題した問題", "/users/#{@user.id}") %></li>
+        <li><%= link_to("回答した問題", "/users/#{@user.id}/answers") %></li>
+        <li><a href="">お気に入り</a></li>
+      </div>
+      <div class="clear"></div>
+      
+      <div class="favorites">
+        <% @user.posts.order(created_at: :desc).each do |post| %>
+        <article class="quiz">
+          <div class="posts-index-item">
+            <div class="post-left">
+              <img src="<%= "/user_images/#{post.user.image_name}" %>">
+            </div>
+            <div class="posts-index-item">
+              <div class="post-user-name">
+                 <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+              </div>
+              <%= link_to(post.content, "/posts/#{post.id}") %>
+            </div>
+            <div class="post-time">
+              <%= post.created_at %>
+            </div>
+          </div>
+          <span>論理</span>
+          <div class="clear"></div>
+        </article>
+      <% end %>
+   
+      </div>
+      <% else %>
+      <% end %>
+    </div>
+    </div>
+  </div>
