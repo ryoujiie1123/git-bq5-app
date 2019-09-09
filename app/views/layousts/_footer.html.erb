@@ -1,0 +1,12 @@
+<footer class="main-footer">
+    <li><%= link_to "答える",  "/posts/index" %></li>
+    <li><%= link_to "出題",   "/posts/new" %></li>
+    <li><%= link_to "通知",   notification_path %></li>
+    <li>
+      <% if @current_user %>
+        <%= link_to "マイページ",   "/users/#{@current_user.id}" %>
+      <% else %>
+        <%= link_to "マイページ",   "/login" %>
+      <% end %>
+    </li>
+</footer>
