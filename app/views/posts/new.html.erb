@@ -1,0 +1,52 @@
+  <h3 class="explain-header"><font face="Impact">Make Quiz</font></h3>
+</header>
+<div class="wrapper">
+<div class="main posts-new">
+  <div class="container posts-new">
+    <%= form_tag("/posts/create")do%>
+      <div class="quiz-sentence">
+        <h3>問題文</h3>
+        <div class="form">
+          <div class="form-body">
+            <textarea name = "content"></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <!--<div class="clear"></div>-->
+      
+      <div class="quiz-hint">
+        <h3>ヒント</h3>
+        <div class="form">
+          <div class="form-hint">
+            <textarea name = "hint"></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <div class="quiz-answer">
+        <h3>答え</h3>
+        <div class="form">
+          <div class="form-answer">
+            <textarea name = "answer"></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <div class="quiz-answer">
+        <h3>解説</h3>
+        <div class="form">
+          <div class="form-answer">
+            <textarea name = "explain"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="post-new-btn">
+        <input type="submit" value="投稿">
+      </div>
+    <!-- end を追加してください -->
+    <% end %>
+  </div>
+</div>
+</div>
