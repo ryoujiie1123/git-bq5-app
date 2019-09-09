@@ -1,0 +1,36 @@
+<% provide(:title, "Make Quiz") %>
+  <h3 class="explain-header"><font face="Impact">MAKE QUIZ</font></h3>
+</header>
+<div class="wrapper">
+    <div class="make_quiz">
+      
+    <h4>問題文</h4>
+    <textarea name="name" rows="8" cols="80"></textarea>
+    <div class="clear"></div>
+
+    <h4>ヒント</h4>
+    <textarea name="name" rows="8" cols="80"></textarea>
+    <div class="clear"></div>
+
+    <h4>カテゴリー</h4>
+    <form action="cgi-bin/formmail.cgi" method="post">
+    <select name="horoscope">
+      <option value="Aries">なぞなぞ</option>
+      <option value="Taurus">論理</option>
+      <option value="Gemini">芸能</option>
+      <option value="Cancer">スポーツ</option>
+      <option value="Leo" selected>グルメ</option>
+      <option value="Virgo">科学</option>
+      <option value="Libra">算数・数学</option>
+      <option value="Scorpio" disabled>さそり座</option>
+      <option value="Saggitarius">いて座</option>
+      <option value="Capricorn">やぎ座</option>
+      <option value="Aquarius">みずがめ座</option>
+      <option value="Pisces">うお座</option>
+    </select>
+    <div class="clear"></div>
+    <input type="submit" value="送信"><input type="reset" value="リセット">
+    </form>
+</div>
+
+  </div>
