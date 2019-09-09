@@ -1,0 +1,78 @@
+<% provide(:title, "Quiz") %>
+<h3 class="explain-header"><font face="Impact">QUIZ</font></h3>
+  </header>
+<div class="wrapper">
+<div class="main posts-show">
+  <div class="container">
+    <div class="posts-show-item">
+      <article class="quiz">
+      <a href="">
+      <div class="post-user-name">
+        <!-- ユーザーの画像が表示されるように、以下のsrcの中を埋めてください -->
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        
+        <!-- link_toメソッドを用いて、ユーザー詳細ページへのリンクを作成してください -->
+        <%= link_to(@user.name, "/users/#{@user.id}") %>
+      </div>
+      </a>
+      <p>
+        <!-- @postのcontentカラムのデータを表示してください -->
+        <%= @post.content %>
+      </p>
+      
+      
+      <p>総回答数: <%= @post.numAnswer %></p>
+      <!-- ここに指定されたHTMLを貼り付けてください -->
+      <%= link_to "ヒント", "/posts/#{@post.id}/hint", class: "btn btn-lg btn-primary" %>
+        <span>論理</span>
+      <div class="post-time">
+        <!-- @postのcreated_atカラムのデータを表示してください -->
+        <%= @post.created_at %>
+      </div>
+      
+      <% if @post.user_id == @current_user.id %>
+        <div class="post-menus">
+          <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+        </div>
+      <% end %>
+      
+      <div class="clear"></div>
+      </article>
+    </div>
+    <% if Answer.find_by(user_id: @current_user.id, post_id: @post.id) %>
+      <div class="already answered">回答済み</div>
+    <% else %>
+    <div class="answer-form">
+      <h5>答える</h5>
+      <%= form_tag("#{@post.id}/answer")do%>
+      <textarea name="remark" rows="8" cols="80"></textarea>
+        <input type="submit" value="答える">
+      <% end %>
+    </div>
+    <% end %>
+    <div class="more-comment">
+      <h5>コメントを残す</h5>
+      <textarea name="name" rows="8" cols="80"></textarea>
+      <button type="button" name="button">送信</button>
+    </div>
+    <div class="clear"></div>
+    <div class="comments">
+      <article class="comment">
+        <a href="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVNTJ8Hp5u_7O8t8EEdYjsso6ZpI5cx7Sz9Dy_wKTdSchGOXiH">
+        <h4>Mr.マリック</h4>
+        </a>
+        <a href="./quizes/quiz00000001.html">
+          <div class="comment-content">
+          <p>これはむず過ぎるうう<br>
+            この問題作ったやつ天才かよおお<br>
+            まあわかったけどな</p>
+          <time>2019/08/20</time>
+          </div>
+          <div class="clear"></div>
+        </a>
+      </article>
+      </div>
+  </div>
+</div>
+</div>
