@@ -1,0 +1,41 @@
+<% provide(:title, "Recommend") %>
+  <div class="header-second">
+      <li><a><%= link_to("おすすめ","/posts/recommend") %></a></li>
+      <li><a><%= link_to("人気","/posts/popular") %></a></li>
+      <li><a><%= link_to("最新","/posts/index") %></a></li>
+    </div>
+  </header>
+<div class="wrapper">
+  <div class="quizes">
+    
+    </div>
+<div class="main posts-index">
+  <div class="container">
+    <% @posts.each do |post| %>
+      <article class="quiz">
+        <div class="post-left">
+          <img src="<%= "/user_images/#{post.user.image_name}" %>">
+          <div class="user_name">
+            <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+          </div>
+        </div>
+      
+        <div class="posts-index-item">
+          <%= link_to(post.content,"/posts/#{post.id}") %>
+        </div>
+        
+        <% if Answer.find_by(user_id: @current_user.id, post_id: post.id) %>
+          <div class="already answered">回答済</div>
+          <% else %>
+          <div class="notyet answered">未回答</div>
+          <% end %>
+        <div class="post-time">
+          <%= post.created_at %>
+        </div>
+        <span>論理</span>
+        <div class="clear"></div>
+      </article>
+    <% end %>
+  </div>
+</div>
+</div>
